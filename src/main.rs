@@ -166,8 +166,8 @@ async fn net_task(stack: &'static Stack<Device>) -> ! {
 #[embassy_executor::main]
 async fn main(spawner: Spawner) {
     let p = embassy_rp::init(Default::default());
-    let fw = include_bytes!("../../embassy/cyw43-firmware/43439A0.bin");
-    let clm = include_bytes!("../../embassy/cyw43-firmware/43439A0_clm.bin");
+    let fw = include_bytes!("../embassy/cyw43-firmware/43439A0.bin");
+    let clm = include_bytes!("../embassy/cyw43-firmware/43439A0_clm.bin");
 
     let mut watchdog = Watchdog::new(p.WATCHDOG);
 
